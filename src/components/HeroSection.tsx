@@ -1,0 +1,114 @@
+import { Button } from "@/components/ui/button";
+import { Star, Shield } from "lucide-react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import heroBg from "@/assets/hero-bg.jpg";
+
+const badges = [
+  { icon: Shield, label: "HMDA Approved", type: "HMDA", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
+  { icon: Shield, label: "YTDA Approved", type: "YTDA", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
+  { icon: Shield, label: "DTCP Approved", type: "DTCP", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
+  { icon: Shield, label: "FCDA Approved", type: "FCDA", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
+];
+
+const HeroSection = () => {
+  const navigate = useNavigate();
+
+  return (
+    <section className="relative h-screen flex items-center pt-12">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000"
+          alt="Premium open plots"
+          className="w-full h-full object-cover"
+        />
+        {/* Modern gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-forest/80 via-forest/40 to-transparent" />
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl">
+          {/* Trust Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-gold px-4 py-2 rounded-full mb-4"
+          >
+            <Star className="w-4 h-4 text-gold-foreground fill-current" />
+            <span className="text-sm font-semibold text-gold-foreground">
+              Trusted by 500+ Happy Families
+            </span>
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-4"
+          >
+            Your Dream Plot, Approved &{" "}
+            <span className="text-gradient-gold">Ready for a Better Tomorrow</span>
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="text-cream/90 text-lg md:text-xl mb-6 max-w-2xl"
+          >
+            Explore HMDA, YTDA, DTCP & FCDA approved open plots with clear documentation and peaceful locations. Start your journey to owning land today.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-wrap gap-4 mb-6"
+          >
+            <Button
+              variant="hero"
+              size="lg"
+              onClick={() => navigate('/ventures')}
+            >
+              Explore Ventures
+            </Button>
+            <Button
+              variant="hero-outline"
+              size="lg"
+              onClick={() => navigate('/book-site-visit')}
+            >
+              Get Free Site Visit
+            </Button>
+          </motion.div>
+
+          {/* Badges */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="flex flex-wrap gap-3"
+          >
+            {badges.map((badge, index) => (
+              <div
+                key={index}
+                onClick={() => navigate(`/ventures?type=${badge.type}`)}
+                className={`flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full border cursor-pointer transition-all hover:scale-105 active:scale-95 ${badge.color}`}
+              >
+                <badge.icon className={`w-4 h-4 ${badge.iconColor}`} />
+                <span className="text-sm font-semibold tracking-wide">{badge.label}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
