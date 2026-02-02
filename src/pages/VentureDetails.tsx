@@ -19,10 +19,7 @@ import venture3Detail2 from "@/assets/venture3-detail-2.jpg";
 import venture3Detail3 from "@/assets/venture3-detail-3.jpg";
 import venture3Detail4 from "@/assets/venture3-detail-4.jpg";
 import venture3Detail5 from "@/assets/venture3-detail-5.jpg";
-import brochurePdf1 from "@/assets/p1.pdf";
-import brochurePdf2 from "@/assets/p2.pdf";
-import brochurePdf3 from "@/assets/p3.pdf";
-import brochurePdf4 from "@/assets/v4.pdf";
+
 
 // Placeholder for missing images
 const venture4Detail1 = venture4Cover;
@@ -39,7 +36,7 @@ const ventureData = {
         badge: "HMDA Approved",
         coverPhoto: venture1Cover,
         images: [ventureDetail2, ventureDetail3],
-        brochure: brochurePdf1,
+        brochure: "/downloads/Mahadev%20ORR%20Enclave.pdf",
         projectHighlights: [
             "HMDA Approved Layout",
             "Main Entrance Beautiful",
@@ -79,13 +76,13 @@ const ventureData = {
     "2": {
         name: "Green Rich Homes",
         subtitle: "Premium Residential Open Plots in Kadthal",
-        location: "Pharma City, Kadthal",
+        location: "Kadthal",
         area: "18 Acres",
         plots: "300",
         badge: "DTCP Approved",
         coverPhoto: venture2Cover,
         images: [venture2Detail1, venture2Detail2],
-        brochure: brochurePdf2,
+        brochure: "/downloads/Green%20Rich%20Homes.pdf",
         projectHighlights: [
             "Boundary wall and Entry Gate with Arch",
             "24x7 Security",
@@ -124,7 +121,7 @@ const ventureData = {
         badge: "HMDA Approved",
         coverPhoto: venture3Cover,
         images: [venture3Detail1, venture3Detail2, venture3Detail3, venture3Detail4, venture3Detail5],
-        brochure: brochurePdf3,
+        brochure: "/downloads/Elegant%20Square.pdf",
         projectHighlights: [
             "HMDA Approved Layout",
             "Main Entrance Beautiful Arch",
@@ -169,7 +166,7 @@ const ventureData = {
         badge: "FCDA Approved",
         coverPhoto: venture4Cover,
         images: [venture4Detail1],
-        brochure: brochurePdf4,
+        brochure: "/downloads/Harmony%20Woods.pdf",
         projectHighlights: [
             "Seating Plaza",
             "Courtyard Seating",
@@ -224,7 +221,7 @@ const ventureData = {
         badge: "YTDA Approved",
         coverPhoto: venture4Cover,
         images: [],
-        brochure: brochurePdf4,
+        brochure: "/downloads/Mahateja%20Hill%20View.pdf",
         projectHighlights: [
             "Main gate with beautiful arch",
             "YTDA approved layout with gated community",
