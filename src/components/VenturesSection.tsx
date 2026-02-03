@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import venture1 from "@/assets/venture-1.jpg";
-import venture2 from "@/assets/venture-2.jpg";
-import venture3 from "@/assets/venture-3.jpg";
+import venture1 from "@/assets/mahadev-orr-enclave-gen.png";
+import venture2 from "@/assets/green-rich-homes-gen.png";
+import venture3 from "@/assets/elegant-square-gen.png";
 import venture4 from "@/assets/venture-4.png";
+import venture5 from "@/assets/mahateja-hill-view-gen.png";
 
 const ventures = [
   {
@@ -19,7 +20,7 @@ const ventures = [
     id: 2,
     image: venture2,
     name: "Green Rich Homes",
-    location: "Pharma City, Kadthal",
+    location: "Kadthal",
     badge: "DTCP Approved",
   },
   {
@@ -38,7 +39,7 @@ const ventures = [
   },
   {
     id: 5,
-    image: venture4,
+    image: venture5,
     name: "Mahateja Hill View",
     location: "Yadadri",
     badge: "YTDA Approved",

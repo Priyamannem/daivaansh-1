@@ -6,10 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Download, CheckCircle2, MapPin, Calendar, Ruler, FileText, X } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import venture1Cover from "@/assets/venture-1.jpg";
-import venture2Cover from "@/assets/venture-2.jpg";
-import venture3Cover from "@/assets/venture-3.jpg";
+import venture1Cover from "@/assets/mahadev-orr-enclave-gen.png";
+import venture2Cover from "@/assets/green-rich-homes-gen.png";
+import venture3Cover from "@/assets/elegant-square-gen.png";
 import venture4Cover from "@/assets/venture-4.png";
+import venture5Cover from "@/assets/mahateja-hill-view-gen.png";
 import ventureDetail2 from "@/assets/venture-detail-2.jpg";
 import ventureDetail3 from "@/assets/venture-detail-3.jpg";
 import venture2Detail1 from "@/assets/venture2-detail-1.jpg";
@@ -219,7 +220,7 @@ const ventureData = {
         area: "200 - 500 Sq.Yds",
         plots: "300+",
         badge: "YTDA Approved",
-        coverPhoto: venture4Cover,
+        coverPhoto: venture5Cover,
         images: [],
         brochure: "/downloads/Mahateja%20Hill%20View.pdf",
         projectHighlights: [
