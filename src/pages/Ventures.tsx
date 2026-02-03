@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import VenturesSection from "@/components/VenturesSection";
 import { motion } from "framer-motion";
@@ -49,6 +50,7 @@ const Ventures = () => {
 
         <VenturesSection filterType={filterType} />
       </main>
+      <Footer />
       <WhatsAppButton />
     </div>
   );

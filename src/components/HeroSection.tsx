@@ -13,6 +13,7 @@ const badges = [
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const currentYear = new Date().getFullYear();
 
   return (
     <section className="relative h-screen flex items-center pt-12">
@@ -107,6 +108,18 @@ const HeroSection = () => {
               </div>
             ))}
           </motion.div>
+        </div>
+      </div>
+
+      {/* Transparent Bottom Footer Overlay */}
+      <div className="absolute bottom-0 left-0 w-full z-20 border-t border-cream/10 bg-black/30 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-cream/80 text-sm">
+            © {currentYear} Daivaansh Infra. All rights reserved. Designed and developed by <a href="https://hashtagheros.in/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors font-medium">Hashtag Heros Digital Solutions</a>
+          </p>
+          <p className="text-cream/60 text-sm italic hidden md:block">
+            "Daivaansh Infra – Building Trust, One Plot at a Time."
+          </p>
         </div>
       </div>
     </section>
