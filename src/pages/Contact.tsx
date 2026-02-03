@@ -325,7 +325,7 @@ Please contact me.`;
           <div className="border-t border-cream/10 bg-primary">
             <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-cream/60 text-sm">
-                © {currentYear} Daivaansh Infra. All rights reserved. Designed and developed by Hashtag Heros Digital Solutions
+                © {currentYear} Daivaansh Infra. All rights reserved. Designed and developed by <a href="https://hashtagheros.in/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Hashtag Heros Digital Solutions</a>
               </p>
               <p className="text-cream/60 text-sm italic">
                 "Daivaansh Infra – Building Trust, One Plot at a Time."
