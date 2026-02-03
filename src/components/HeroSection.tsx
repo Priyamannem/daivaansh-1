@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Star, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-section-image.jpg";
 
 const badges = [
-  { icon: Shield, label: "HMDA Approved", type: "HMDA", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
-  { icon: Shield, label: "YTDA Approved", type: "YTDA", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
-  { icon: Shield, label: "DTCP Approved", type: "DTCP", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
-  { icon: Shield, label: "FCDA Approved", type: "FCDA", color: "bg-gold/20 border-gold/40 text-cream", iconColor: "text-gold" },
+  { icon: Shield, label: "HMDA Approved", type: "HMDA", color: "bg-black/40 border-cream/30 text-cream hover:bg-black/50", iconColor: "text-gold" },
+  { icon: Shield, label: "YTDA Approved", type: "YTDA", color: "bg-black/40 border-cream/30 text-cream hover:bg-black/50", iconColor: "text-gold" },
+  { icon: Shield, label: "DTCP Approved", type: "DTCP", color: "bg-black/40 border-cream/30 text-cream hover:bg-black/50", iconColor: "text-gold" },
+  { icon: Shield, label: "FCDA Approved", type: "FCDA", color: "bg-black/40 border-cream/30 text-cream hover:bg-black/50", iconColor: "text-gold" },
 ];
 
 const HeroSection = () => {
@@ -19,12 +19,12 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000"
+          src={heroBg}
           alt="Premium open plots"
           className="w-full h-full object-cover"
         />
         {/* Modern gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-forest/80 via-forest/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
       </div>
 
       {/* Content */}
@@ -74,6 +74,7 @@ const HeroSection = () => {
             <Button
               variant="hero"
               size="lg"
+              className="bg-cream text-forest hover:bg-white border-none"
               onClick={() => navigate('/ventures')}
             >
               Explore Ventures
@@ -81,6 +82,7 @@ const HeroSection = () => {
             <Button
               variant="hero-outline"
               size="lg"
+              className="border-cream text-cream hover:bg-cream/20"
               onClick={() => navigate('/book-site-visit')}
             >
               Get Free Site Visit

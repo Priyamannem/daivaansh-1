@@ -7,40 +7,40 @@
 @layer base {
   :root {
     --background: 45 33% 97%;
-    --foreground: 150 25% 15%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 150 25% 15%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 150 25% 15%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 150 40% 22%;
+    --primary: 0 0% 10%;
     --primary-foreground: 45 33% 97%;
 
     --secondary: 45 50% 92%;
-    --secondary-foreground: 150 40% 22%;
+    --secondary-foreground: 0 0% 10%;
 
     --muted: 45 20% 94%;
-    --muted-foreground: 150 10% 45%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 150 40% 22%;
-    --accent-foreground: 45 33% 97%;
+    --accent: 45 50% 92%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 45 20% 88%;
     --input: 45 20% 88%;
-    --ring: 150 40% 22%;
+    --ring: 42 80% 52%;
 
     --radius: 0.5rem;
 
     --gold: 42 80% 52%;
-    --gold-foreground: 150 40% 15%;
-    --forest: 150 40% 22%;
-    --forest-light: 150 30% 35%;
-    --forest-dark: 150 50% 15%;
+    --gold-foreground: 0 0% 10%;
+    --forest: 0 0% 10%;
+    --forest-light: 0 0% 20%;
+    --forest-dark: 0 0% 5%;
     --cream: 45 33% 97%;
     --cream-dark: 45 20% 92%;
 
@@ -65,7 +65,7 @@
     --popover-foreground: 45 33% 97%;
 
     --primary: 42 80% 52%;
-    --primary-foreground: 150 40% 15%;
+    --primary-foreground: 0 0% 10%;
 
     --secondary: 150 30% 18%;
     --secondary-foreground: 45 33% 97%;
@@ -123,18 +123,18 @@
   }
 
   .bg-forest-gradient {
-    background: linear-gradient(135deg, hsl(150 50% 15%) 0%, hsl(150 40% 22%) 50%, hsl(150 30% 28%) 100%);
+    background: linear-gradient(135deg, hsl(0 0% 15%) 0%, hsl(0 0% 10%) 50%, hsl(0 0% 20%) 100%);
   }
 
   .hero-overlay {
-    background: linear-gradient(to right, hsla(150, 40%, 15%, 0.85) 0%, hsla(150, 40%, 15%, 0.6) 50%, transparent 100%);
+    background: linear-gradient(to right, hsla(0, 0%, 10%, 0.85) 0%, hsla(0, 0%, 10%, 0.6) 50%, transparent 100%);
   }
 
   .card-shadow {
-    box-shadow: 0 4px 20px -4px hsla(150, 40%, 15%, 0.1);
+    box-shadow: 0 4px 20px -4px hsla(0, 0%, 0%, 0.1);
   }
 
   .card-shadow-hover {
-    box-shadow: 0 8px 30px -4px hsla(150, 40%, 15%, 0.15);
+    box-shadow: 0 8px 30px -4px hsla(0, 0%, 0%, 0.15);
   }
 }
