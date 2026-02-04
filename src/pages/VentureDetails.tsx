@@ -438,7 +438,9 @@ const VentureDetails = () => {
 
                                     <a
                                         href={venture.brochure}
-                                        download
+                                        download={`${venture.name}-Brochure.pdf`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-full block"
                                     >
                                         <Button className="w-full bg-gold hover:bg-gold/90 text-gold-foreground font-bold py-6 text-lg shadow-md hover:shadow-lg transition-all">

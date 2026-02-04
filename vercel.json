@@ -1,9 +1,7 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false,
     "headers": [
         {
-            "source": "/downloads/(.*).pdf",
+            "source": "/downloads/(.*)\\.pdf",
             "headers": [
                 {
                     "key": "Content-Type",
@@ -11,11 +9,7 @@
                 },
                 {
                     "key": "Content-Disposition",
-                    "value": "attachment"
-                },
-                {
-                    "key": "Access-Control-Allow-Origin",
-                    "value": "*"
+                    "value": "inline"
                 }
             ]
         }
