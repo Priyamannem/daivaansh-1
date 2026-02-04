@@ -17,9 +17,9 @@ const Footer = ({ minimal = false }: FooterProps) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Company Info */}
             <div>
-              <Link to="/" className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center overflow-hidden shadow-lg">
-                  <img src={logoImg} alt="Daivaansh Logo" className="w-full h-full object-cover" />
+              <Link to="/" className="flex items-center gap-3 mb-6 group">
+                <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center p-1.5 shadow-lg border border-gold/20 transition-transform group-hover:scale-105">
+                  <img src={logoImg} alt="Daivaansh Logo" className="w-full h-full object-contain" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-serif font-bold text-xl text-cream">Daivaansh</span>
@@ -125,9 +125,6 @@ const Footer = ({ minimal = false }: FooterProps) => {
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cream/60 text-sm">
             © {currentYear} Daivaansh Infra. All rights reserved. Designed and developed by <a href="https://hashtagheros.in/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Hashtag Heros Digital Solutions</a>
-          </p>
-          <p className="text-cream/60 text-sm italic">
-            "Daivaansh Infra – Building Trust, One Plot at a Time."
           </p>
         </div>
       </div>

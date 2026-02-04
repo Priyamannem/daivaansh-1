@@ -30,16 +30,16 @@ const Header = ({ transparent = false }: HeaderProps) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled || !transparent
-        ? "bg-white/95 backdrop-blur-md border-gray-100 shadow-md py-2"
-        : "bg-transparent border-transparent py-4"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || !transparent
+        ? "bg-white/95 backdrop-blur-md shadow-md py-2"
+        : "bg-transparent py-4"
         }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all overflow-hidden p-0.5 ${isScrolled || !transparent ? "bg-white shadow-lg ring-1 ring-gold/10" : "bg-white/20 backdrop-blur-md"
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className={`w-14 h-14 rounded-xl flex items-center justify-center p-1.5 transition-all shadow-md group-hover:shadow-lg border border-gold/20 ${isScrolled || !transparent ? "bg-white" : "bg-white/90 backdrop-blur-sm"
               }`}>
               <img src={logoImg} alt="Daivaansh Logo" className="w-full h-full object-contain" />
             </div>

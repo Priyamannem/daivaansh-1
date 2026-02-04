@@ -34,7 +34,7 @@ const ventures = [
     id: 4,
     image: venture4,
     name: "Harmony Woods",
-    location: "Kadthal, Future City",
+    location: "Tummaluru",
     badge: "FCDA Approved",
   },
   {

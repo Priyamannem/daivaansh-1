@@ -101,7 +101,7 @@ const HeroSection = () => {
               <div
                 key={index}
                 onClick={() => navigate(`/ventures?type=${badge.type}`)}
-                className={`flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full border cursor-pointer transition-all hover:scale-105 active:scale-95 ${badge.color}`}
+                className={`flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full cursor-pointer transition-all hover:scale-105 active:scale-95 ${badge.color}`}
               >
                 <badge.icon className={`w-4 h-4 ${badge.iconColor}`} />
                 <span className="text-sm font-semibold tracking-wide">{badge.label}</span>
@@ -112,13 +112,10 @@ const HeroSection = () => {
       </div>
 
       {/* Transparent Bottom Footer Overlay */}
-      <div className="absolute bottom-0 left-0 w-full z-20 border-t border-cream/10 bg-black/30 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="absolute bottom-0 left-0 w-full z-20 bg-black/30 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-center items-center gap-4">
           <p className="text-cream/80 text-sm">
             © {currentYear} Daivaansh Infra. All rights reserved. Designed and developed by <a href="https://hashtagheros.in/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors font-medium">Hashtag Heros Digital Solutions</a>
-          </p>
-          <p className="text-cream/60 text-sm italic hidden md:block">
-            "Daivaansh Infra – Building Trust, One Plot at a Time."
           </p>
         </div>
       </div>
