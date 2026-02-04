@@ -167,7 +167,7 @@ const ventureData = {
         badge: "FCDA Approved",
         coverPhoto: venture4Cover,
         images: [venture4Detail1],
-        brochure: "",
+        brochure: "/legal/harmony-woods-brochure.pdf",
         projectHighlights: [
             "Seating Plaza",
             "Courtyard Seating",
