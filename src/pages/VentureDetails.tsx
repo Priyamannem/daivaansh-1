@@ -37,7 +37,7 @@ const ventureData = {
         badge: "HMDA Approved",
         coverPhoto: venture1Cover,
         images: [ventureDetail2, ventureDetail3],
-        brochure: "/downloads/mahadev-brochure.pdf?v=3",
+        brochure: "/downloads/mahadev-brochure.pdf",
         projectHighlights: [
             "HMDA Approved Layout",
             "Main Entrance Beautiful",
@@ -83,7 +83,7 @@ const ventureData = {
         badge: "DTCP Approved",
         coverPhoto: venture2Cover,
         images: [venture2Detail1, venture2Detail2],
-        brochure: "/downloads/green.pdf?v=2",
+        brochure: "/downloads/green.pdf",
         projectHighlights: [
             "Boundary wall and Entry Gate with Arch",
             "24x7 Security",
@@ -122,7 +122,7 @@ const ventureData = {
         badge: "HMDA Approved",
         coverPhoto: venture3Cover,
         images: [venture3Detail1, venture3Detail2, venture3Detail3, venture3Detail4, venture3Detail5],
-        brochure: "/downloads/elegant.pdf?v=2",
+        brochure: "/downloads/elegant.pdf",
         projectHighlights: [
             "HMDA Approved Layout",
             "Main Entrance Beautiful Arch",
@@ -167,7 +167,7 @@ const ventureData = {
         badge: "FCDA Approved",
         coverPhoto: venture4Cover,
         images: [venture4Detail1],
-        brochure: "/downloads/harmony.pdf?v=2",
+        brochure: "/downloads/harmony.pdf",
         projectHighlights: [
             "Seating Plaza",
             "Courtyard Seating",
@@ -222,7 +222,7 @@ const ventureData = {
         badge: "YTDA Approved",
         coverPhoto: venture5Cover,
         images: [],
-        brochure: "/downloads/mahateja.pdf?v=2",
+        brochure: "/downloads/mahateja.pdf",
         projectHighlights: [
             "Main gate with beautiful arch",
             "YTDA approved layout with gated community",
@@ -438,7 +438,6 @@ const VentureDetails = () => {
 
                                     <a
                                         href={venture.brochure}
-                                        download={`${venture.name}-Brochure.pdf`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full block"
