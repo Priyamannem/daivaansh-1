@@ -37,7 +37,7 @@ const ventureData = {
         badge: "HMDA Approved",
         coverPhoto: venture1Cover,
         images: [ventureDetail2, ventureDetail3],
-        brochure: "/downloads/mahadev-orr-enclave.pdf",
+        brochure: "/downloads/mahadev.pdf",
         projectHighlights: [
             "HMDA Approved Layout",
             "Main Entrance Beautiful",
@@ -83,7 +83,7 @@ const ventureData = {
         badge: "DTCP Approved",
         coverPhoto: venture2Cover,
         images: [venture2Detail1, venture2Detail2],
-        brochure: "/downloads/green-rich-homes.pdf",
+        brochure: "/downloads/green.pdf",
         projectHighlights: [
             "Boundary wall and Entry Gate with Arch",
             "24x7 Security",
@@ -122,7 +122,7 @@ const ventureData = {
         badge: "HMDA Approved",
         coverPhoto: venture3Cover,
         images: [venture3Detail1, venture3Detail2, venture3Detail3, venture3Detail4, venture3Detail5],
-        brochure: "/downloads/elegant-square.pdf",
+        brochure: "/downloads/elegant.pdf",
         projectHighlights: [
             "HMDA Approved Layout",
             "Main Entrance Beautiful Arch",
@@ -167,7 +167,7 @@ const ventureData = {
         badge: "FCDA Approved",
         coverPhoto: venture4Cover,
         images: [venture4Detail1],
-        brochure: "/downloads/harmony-woods.pdf",
+        brochure: "/downloads/harmony.pdf",
         projectHighlights: [
             "Seating Plaza",
             "Courtyard Seating",
@@ -222,7 +222,7 @@ const ventureData = {
         badge: "YTDA Approved",
         coverPhoto: venture5Cover,
         images: [],
-        brochure: "/downloads/mahateja-hill-view.pdf",
+        brochure: "/downloads/mahateja.pdf",
         projectHighlights: [
             "Main gate with beautiful arch",
             "YTDA approved layout with gated community",
@@ -436,7 +436,13 @@ const VentureDetails = () => {
                                         </div>
                                     </div>
 
-                                    <a href={venture.brochure} download={`${venture.name}-Brochure.pdf`} className="w-full block">
+                                    <a
+                                        href={venture.brochure}
+                                        download
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full block"
+                                    >
                                         <Button className="w-full bg-gold hover:bg-gold/90 text-gold-foreground font-bold py-6 text-lg shadow-md hover:shadow-lg transition-all">
                                             <Download className="mr-2 w-5 h-5" />
                                             Download Brochure
