@@ -359,7 +359,7 @@ const VentureDetails = () => {
                                 {/* Project Highlights */}
                                 <div>
                                     <h2 className="font-serif text-3xl font-bold text-foreground mb-6 pb-2 border-b border-gold/20">Project Highlights</h2>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                         {venture.projectHighlights.map((highlight, index) => (
                                             <motion.div
                                                 key={index}
@@ -367,7 +367,7 @@ const VentureDetails = () => {
                                                 whileInView={{ opacity: 1, y: 0 }}
                                                 viewport={{ once: true }}
                                                 transition={{ delay: index * 0.05 }}
-                                                className="flex items-start gap-3 p-3 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors"
+                                                className="flex items-start gap-2 p-1.5 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors"
                                             >
                                                 <CheckCircle2 className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                                                 <span className="text-foreground/80">{highlight}</span>
