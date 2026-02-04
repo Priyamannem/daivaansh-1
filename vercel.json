@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "buildCommand": "git lfs pull && npm run build",
     "cleanUrls": true,
     "headers": [
         {
