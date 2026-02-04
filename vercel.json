@@ -1,19 +1,9 @@
 {
     "cleanUrls": true,
     "trailingSlash": false,
-    "rewrites": [
-        {
-            "source": "/downloads/(.*)",
-            "destination": "/downloads/$1"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ],
     "headers": [
         {
-            "source": "/downloads/(.*)",
+            "source": "/downloads/(.*).pdf",
             "headers": [
                 {
                     "key": "Content-Type",
@@ -22,8 +12,22 @@
                 {
                     "key": "Content-Disposition",
                     "value": "attachment"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
                 }
             ]
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/downloads/(.*)",
+            "destination": "/downloads/$1"
+        },
+        {
+            "source": "/((?!downloads|assets|favicon|logo).*)",
+            "destination": "/index.html"
         }
     ]
 }
