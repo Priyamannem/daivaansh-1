@@ -161,7 +161,7 @@ const ventureData = {
     "4": {
         name: "Harmony Woods",
         subtitle: "Premium Residential Open Plots in Future City",
-        location: "Tummaluru",
+        location: "Tummaluru, Future City",
         area: "53 Acres",
         plots: "526",
         badge: "FCDA Approved",
