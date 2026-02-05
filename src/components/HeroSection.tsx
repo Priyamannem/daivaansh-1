@@ -70,23 +70,33 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-wrap gap-4 mb-6"
+            className="flex flex-wrap gap-4 mb-8"
           >
             <Button
               variant="hero"
               size="lg"
-              className="bg-cream text-forest hover:bg-white border-none"
+              className="relative overflow-hidden bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black hover:text-white font-bold border-2 border-amber-600 shadow-[0_0_15px_rgba(251,191,36,0.5)] transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8"
               onClick={() => navigate('/ventures')}
             >
-              Explore Ventures
+              <motion.div
+                className="absolute top-0 -left-[100%] w-[50%] h-full bg-white/40 skew-x-[-25deg]"
+                animate={{ left: ['100%', '-100%'] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "linear", repeatDelay: 1 }}
+              />
+              <span className="relative z-10">Explore Ventures</span>
             </Button>
             <Button
               variant="hero-outline"
               size="lg"
-              className="border-cream text-cream hover:bg-cream/20"
+              className="relative overflow-hidden border-2 border-amber-400 bg-black/40 text-amber-400 hover:text-white font-bold transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8"
               onClick={() => navigate('/book-site-visit')}
             >
-              Get Free Site Visit
+              <motion.div
+                className="absolute top-0 -left-[100%] w-[50%] h-full bg-white/20 skew-x-[-25deg]"
+                animate={{ left: ['100%', '-100%'] }}
+                transition={{ repeat: Infinity, duration: 2.5, ease: "linear", repeatDelay: 1.5 }}
+              />
+              <span className="relative z-10">Get Free Site Visit</span>
             </Button>
           </motion.div>
 
@@ -101,10 +111,15 @@ const HeroSection = () => {
               <div
                 key={index}
                 onClick={() => navigate(`/ventures?type=${badge.type}`)}
-                className={`flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full cursor-pointer transition-all hover:scale-105 active:scale-95 ${badge.color}`}
+                className={`group relative overflow-hidden flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full cursor-pointer transition-all hover:scale-105 active:scale-95 border-2 border-amber-500/40 bg-black/60 text-cream hover:border-amber-400 hover:bg-black/80`}
               >
-                <badge.icon className={`w-4 h-4 ${badge.iconColor}`} />
-                <span className="text-sm font-semibold tracking-wide">{badge.label}</span>
+                <motion.div
+                  className="absolute top-0 -left-[100%] w-full h-full bg-white/10 skew-x-[-25deg]"
+                  animate={{ left: ['100%', '-100%'] }}
+                  transition={{ repeat: Infinity, duration: 3, ease: "linear", delay: index * 0.5 }}
+                />
+                <badge.icon className={`w-4 h-4 text-amber-500 relative z-10`} />
+                <span className="text-sm font-semibold tracking-wide relative z-10">{badge.label}</span>
               </div>
             ))}
           </motion.div>

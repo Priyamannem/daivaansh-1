@@ -154,7 +154,7 @@ const About = () => {
                   className="md:col-span-3"
                 >
                   <h3 className="font-serif text-3xl font-bold text-forest mb-2">Sampath Bontala</h3>
-                  <p className="text-accent font-bold text-xl mb-6">Managing Director</p>
+                  <p className="text-forest font-bold text-xl mb-6">Managing Director</p>
 
                   <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                     <p>

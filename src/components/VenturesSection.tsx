@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import venture1 from "@/assets/mahadev-orr-enclave-gen.png";
-import venture2 from "@/assets/green-rich-homes-gen.png";
-import venture3 from "@/assets/elegant-square-gen.png";
+import venture1 from "@/assets/mahadev-orr-enclave-new.jpg";
+import venture2 from "@/assets/green-rich-homes-new.jpg";
+import venture3 from "@/assets/elegant-square-new.jpg";
 import venture4 from "@/assets/venture-4.png";
-import venture5 from "@/assets/mahateja-hill-view-gen.png";
+import venture5 from "@/assets/mahateja-hill-view-new.jpg";
 
 const ventures = [
   {
@@ -105,14 +105,14 @@ const VenturesSection = ({ filterType }: VenturesSectionProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-card rounded-xl overflow-hidden card-shadow hover:card-shadow-hover transition-all duration-300"
+              className="group bg-card rounded-xl overflow-hidden border-4 border-forest shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={venture.image}
                   alt={venture.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${venture.name === "Elegant Square" ? "object-[center_top]" : ""}`}
                 />
                 <div className="absolute top-4 left-4">
                   <span className={`${getBadgeColor(venture.badge)} px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-lg border`}>
