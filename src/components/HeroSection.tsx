@@ -3,6 +3,7 @@ import { Star, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import heroBg from "@/assets/hero-section-image.jpg";
+import confetti from 'canvas-confetti';
 
 const badges = [
   { icon: Shield, label: "HMDA Approved", type: "HMDA", color: "bg-black/40 border-cream/30 text-cream hover:bg-black/50", iconColor: "text-gold" },
@@ -14,6 +15,16 @@ const badges = [
 const HeroSection = () => {
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
+
+  const handleAction = (path: string) => {
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#FFD700', '#DAA520', '#228B22', '#32CD32']
+    });
+    setTimeout(() => navigate(path), 600);
+  };
 
   return (
     <section className="relative h-screen flex items-center pt-12">
@@ -76,7 +87,7 @@ const HeroSection = () => {
               variant="hero"
               size="lg"
               className="relative overflow-hidden bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black hover:text-white font-bold border-2 border-amber-600 shadow-[0_0_15px_rgba(251,191,36,0.5)] transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8"
-              onClick={() => navigate('/ventures')}
+              onClick={() => handleAction('/ventures')}
             >
               <motion.div
                 className="absolute top-0 -left-[100%] w-[50%] h-full bg-white/40 skew-x-[-25deg]"
@@ -89,7 +100,7 @@ const HeroSection = () => {
               variant="hero-outline"
               size="lg"
               className="relative overflow-hidden border-2 border-amber-400 bg-black/40 text-amber-400 hover:text-white font-bold transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8"
-              onClick={() => navigate('/book-site-visit')}
+              onClick={() => handleAction('/book-site-visit')}
             >
               <motion.div
                 className="absolute top-0 -left-[100%] w-[50%] h-full bg-white/20 skew-x-[-25deg]"
@@ -110,7 +121,15 @@ const HeroSection = () => {
             {badges.map((badge, index) => (
               <div
                 key={index}
-                onClick={() => navigate(`/ventures?type=${badge.type}`)}
+                onClick={() => {
+                  confetti({
+                    particleCount: 40,
+                    spread: 50,
+                    origin: { y: 0.8, x: 0.5 },
+                    colors: ['#FFD700', '#228B22']
+                  });
+                  navigate(`/ventures?type=${badge.type}`);
+                }}
                 className={`group relative overflow-hidden flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full cursor-pointer transition-all hover:scale-105 active:scale-95 border-2 border-amber-500/40 bg-black/60 text-cream hover:border-amber-400 hover:bg-black/80`}
               >
                 <motion.div
@@ -127,9 +146,9 @@ const HeroSection = () => {
       </div>
 
       {/* Transparent Bottom Footer Overlay */}
-      <div className="absolute bottom-0 left-0 w-full z-20 bg-black/30 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-center items-center gap-4">
-          <p className="text-cream/80 text-sm">
+      <div className="absolute bottom-0 left-0 w-full z-20 bg-black/30 backdrop-blur-none">
+        <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-center items-center gap-2">
+          <p className="text-cream/80 text-xs">
             © {currentYear} Daivaansh Infra. All rights reserved. Designed and developed by <a href="https://hashtagheros.in/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors font-medium">Hashtag Heros Digital Solutions</a>
           </p>
         </div>

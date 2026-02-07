@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logoImg from "@/assets/logo.jpg";
 
 const navLinks = [
-  { name: "Home", path: "/" },
+  { name: "Home", path: "/home" },
   { name: "Ventures", path: "/ventures" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
@@ -38,7 +38,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/home" className="flex items-center gap-3 group">
             <div className={`w-14 h-14 rounded-xl flex items-center justify-center p-1.5 transition-all shadow-md group-hover:shadow-lg border border-gold/20 ${isScrolled || !transparent ? "bg-white" : "bg-white/90 backdrop-blur-sm"
               }`}>
               <img src={logoImg} alt="Daivaansh Logo" className="w-full h-full object-contain" />

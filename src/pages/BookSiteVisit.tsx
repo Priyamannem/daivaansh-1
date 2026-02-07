@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, MapPin } from "lucide-react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const BookSiteVisit = () => {
     const [formData, setFormData] = useState({
@@ -159,6 +160,7 @@ Please contact me to schedule a visit.`;
                 </div>
             </main>
 
+            <Footer />
         </div>
     );
 };
