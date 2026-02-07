@@ -36,7 +36,7 @@ const ConfettiEffect: React.FC = () => {
             });
 
             // Constant celebration effect
-            const interval: any = setInterval(function () {
+            const interval = setInterval(function () {
                 const timeLeft = animationEnd - Date.now();
 
                 if (timeLeft <= 0) {

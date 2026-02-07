@@ -34,7 +34,7 @@ const Footer = ({ minimal = false }: FooterProps) => {
                   { icon: FacebookLogo, label: "Facebook", href: "https://www.facebook.com/daivaanshinfra" },
                   { icon: InstagramLogo, label: "Instagram", href: "https://www.instagram.com/bonthalasampath?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
                   { icon: YoutubeLogo, label: "YouTube", href: "https://www.youtube.com/@daivaansh_infra" },
-                ].map((social, index) => (
+                ].map((social: { icon: React.ElementType, label: string, href: string }, index) => (
                   <a
                     key={index}
                     href={social.href}

@@ -7,6 +7,7 @@ import venture2 from "@/assets/green-rich-homes-new.jpg";
 import venture3 from "@/assets/elegant-square-new.jpg";
 import venture4 from "@/assets/venture-4.png";
 import venture5 from "@/assets/mahateja-hill-view-new.jpg";
+import venture6 from "@/assets/venture-6.jpeg";
 
 const ventures = [
   {
@@ -43,6 +44,13 @@ const ventures = [
     name: "Mahateja Hill View",
     location: "Yadadri",
     badge: "YTDA Approved",
+  },
+  {
+    id: 6,
+    image: venture6,
+    name: "New Dream City",
+    location: "Jangaon",
+    badge: "DTCP Approved",
   },
 ];
 

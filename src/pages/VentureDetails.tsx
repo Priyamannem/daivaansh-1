@@ -11,6 +11,7 @@ import venture2Cover from "@/assets/green-rich-homes-new.jpg";
 import venture3Cover from "@/assets/elegant-square-new.jpg";
 import venture4Cover from "@/assets/venture-4.png";
 import venture5Cover from "@/assets/mahateja-hill-view-new.jpg";
+import venture6Cover from "@/assets/venture-6.jpeg";
 import ventureDetail2 from "@/assets/venture-detail-2.jpg";
 import ventureDetail3 from "@/assets/venture-detail-3.jpg";
 import venture2Detail1 from "@/assets/venture2-detail-1.jpg";
@@ -258,6 +259,55 @@ const ventureData = {
             "5 Mins drive to Raigiri Railway Station (Proposed 'YADADRI' MMTS Near to NH163 Hyderabad - Warangal Highway)",
             "Govt Proposed ABHAYAARAYANAM, DEER PARK, VEDIC UNIVERSITY and VIP Guest Houses"
         ]
+    },
+    "6": {
+        name: "New Dream City",
+        subtitle: "Premium Residential Open Plots in Dream City",
+        location: "Jangaon",
+        area: "36 Acres",
+        plots: "443",
+        badge: "DTCP Approved",
+        coverPhoto: venture6Cover,
+        images: [],
+        brochure: "/legal/Dream-city.pdf",
+        projectHighlights: [
+            "DTCP Approved Layout",
+            "All Roads",
+            "Electric poles and street lights",
+            "Water supply to each plot with tap connection",
+            "Overhead tank",
+            "Underground Drainage system",
+            "Swimming Pool",
+            "Main entrance with excellent arch",
+            "24/7 security",
+            "Compound wall for entire layout with solar fencing",
+            "Children park with play equipment",
+            "2 beautiful garden area development",
+            "Numbering for each plot",
+            "Avenue plantation",
+            "Carbing stones on both sides of the road",
+            "100% clear as per vastu"
+        ],
+        locationHighlights: [
+            "Infosys",
+            "Raheja Mindspace",
+            "Outer Ring Road (ORR)",
+            "Aiims Medical University",
+            "Bhongir Town & Fort",
+            "MMTS hub, Bhongir",
+            "Surendrapuri",
+            "Sri Lakshmi Narasimha Swamy temple, Yadadri",
+            "Proposed Metro Train up to Raigiri Town/ Yadadri",
+            "Kolanpaka Jain Temple",
+            "Health smart city",
+            "Pharmaceutical, Medical & Engg. Colleges",
+            "Proposed (RRR) Regional Road",
+            "Hyderabad - Warangal Industrial Corridor",
+            "Textile Park",
+            "National highway 6 track Road",
+            "Jamgaon Junction",
+            "Swarnagiri Temple",
+        ],
     }
 };
 
