@@ -23,9 +23,38 @@ const LaunchPage: React.FC = () => {
     }, [countdown]);
 
     const handleLaunch = () => {
-        // Play blasting sound
+        console.log("🚀 Launch button clicked!");
+
+        // Play blasting sound with comprehensive debugging
         if (audioRef.current) {
-            audioRef.current.play().catch(err => console.log("Audio play failed:", err));
+            console.log("✅ Audio element found");
+            console.log("📊 Audio ready state:", audioRef.current.readyState);
+            console.log("🔊 Audio source:", audioRef.current.src);
+
+            // Set volume
+            audioRef.current.volume = 0.8;
+            console.log("🔊 Volume set to:", audioRef.current.volume);
+
+            // Attempt to play
+            const playPromise = audioRef.current.play();
+
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        console.log("✅ Audio playing successfully!");
+                    })
+                    .catch(err => {
+                        console.error("❌ Audio play failed:", err);
+                        console.error("Error name:", err.name);
+                        console.error("Error message:", err.message);
+
+                        // Show user-friendly message
+                        alert("Sound couldn't play. Please check your browser's audio settings or try clicking again!");
+                    });
+            }
+        } else {
+            console.error("❌ Audio element not found!");
+            alert("Audio element not loaded. Please refresh the page.");
         }
 
         // Fire poppers
@@ -67,12 +96,16 @@ const LaunchPage: React.FC = () => {
 
     return (
         <div className="launch-page-container" style={{ backgroundImage: `url(${launchBg})` }}>
-            {/* Background Sound */}
+            {/* Background Sound - Using local file for reliability */}
             <audio
                 ref={audioRef}
-                src="https://assets.mixkit.co/sfx/preview/mixkit-party-popper-1329.mp3"
                 preload="auto"
-            />
+                onLoadedData={() => console.log("✅ Audio loaded successfully")}
+                onError={(e) => console.error("❌ Audio loading error:", e)}
+            >
+                <source src="/party-popper.mp3" type="audio/mpeg" />
+                <source src="https://assets.mixkit.co/sfx/preview/mixkit-party-popper-1329.mp3" type="audio/mpeg" />
+            </audio>
 
             <div className="launch-overlay">
                 <motion.div

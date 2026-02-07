@@ -80,6 +80,7 @@ const Footer = ({ minimal = false }: FooterProps) => {
                   { name: "Elegant Square", id: 3 },
                   { name: "Harmony Woods", id: 4 },
                   { name: "Mahateja Hill View", id: 5 },
+                  { name: "New Dream City", id: 6 },
                 ].map((venture) => (
                   <li key={venture.id}>
                     <Link
