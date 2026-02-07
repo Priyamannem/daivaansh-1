@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import './LaunchPage.css';
 import launchBg from '../assets/launch-page.jpeg';
+import logoImg from '../assets/logo.jpg';
 
 const LaunchPage: React.FC = () => {
     const navigate = useNavigate();
@@ -31,9 +32,8 @@ const LaunchPage: React.FC = () => {
             console.log("📊 Audio ready state:", audioRef.current.readyState);
             console.log("🔊 Audio source:", audioRef.current.src);
 
-            // Set volume
-            audioRef.current.volume = 0.8;
-            console.log("🔊 Volume set to:", audioRef.current.volume);
+            // Set volume to max
+            audioRef.current.volume = 1.0;
 
             // Attempt to play
             const playPromise = audioRef.current.play();
@@ -88,10 +88,10 @@ const LaunchPage: React.FC = () => {
             });
         }, 150);
 
-        // Redirect after a short delay to see the poppers
+        // Redirect after a short delay to allow sound to start
         setTimeout(() => {
             navigate('/home');
-        }, 1500);
+        }, 300);
     };
 
     return (
@@ -112,8 +112,24 @@ const LaunchPage: React.FC = () => {
                     className="launch-content"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.5 }}
                 >
+                    {/* Logo Section */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="flex flex-col items-center gap-3 mb-8"
+                    >
+                        <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center p-3 shadow-xl border-4 border-gold/30">
+                            <img src={logoImg} alt="Daivaansh Logo" className="w-full h-full object-contain" />
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <span className="font-serif font-bold text-2xl text-cream tracking-wide">Daivaansh</span>
+                            <span className="font-serif font-bold text-xl text-cream tracking-wide">Infra</span>
+                        </div>
+                    </motion.div>
+
                     <h1 className="launch-h1">Something Remarkable is about to Rise</h1>
                     <h3 className="launch-h3">Built on vision, planning, and trust</h3>
 
