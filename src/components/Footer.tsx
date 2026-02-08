@@ -109,7 +109,9 @@ const Footer = ({ minimal = false }: FooterProps) => {
                 <li className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                   <span className="text-cream/80 text-xs">
-                    Habsiguda, Hyderabad
+                    2nd Floor, Pragati Nivas,<br />
+                    Opposite to Anand Eye Hospital,<br />
+                    Habsiguda, Hyderabad - 500007
                   </span>
                 </li>
               </ul>

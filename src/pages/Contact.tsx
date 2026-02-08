@@ -130,9 +130,11 @@ Please contact me.`;
                     <div>
                       <h3 className="font-serif font-bold text-forest">Visit Us</h3>
                       <p className="text-muted-foreground">
-                        2nd Floor, Pragati Nivas, Opposite to Anand Eye Hospital,<br />
-                        Habsiguda, Hyderabad - 500007
-                      </p>
+                        <span className="text-cream/80 text-base leading-relaxed">
+                          2nd Floor, Pragati Nivas,<br />
+                          Opposite to Anand Eye Hospital,<br />
+                          Habsiguda, Hyderabad - 500007
+                        </span>    </p>
                     </div>
                   </div>
                 </div>
