@@ -26,43 +26,20 @@ const LaunchPage: React.FC = () => {
     const handleLaunch = () => {
         console.log("🚀 Launch button clicked!");
 
-        // Play blasting sound with comprehensive debugging
-        if (audioRef.current) {
-            console.log("✅ Audio element found");
-            console.log("📊 Audio ready state:", audioRef.current.readyState);
-            console.log("🔊 Audio source:", audioRef.current.src);
-
-            // Set volume to 100%
-            audioRef.current.volume = 1.0;
-
-            // Attempt to play
-            const playPromise = audioRef.current.play();
-
-            if (playPromise !== undefined) {
-                playPromise
-                    .then(() => {
-                        console.log("✅ Audio playing successfully!");
-                    })
-                    .catch(err => {
-                        console.error("❌ Audio play failed:", err);
-                        console.error("Error name:", err.name);
-                        console.error("Error message:", err.message);
-
-                        // Show user-friendly log
-                        console.warn("Sound couldn't play automatically. Most browsers require user interaction first.");
-                    });
-            }
-        } else {
-            console.error("❌ Audio element not found!");
-        }
-
-
         // Fire poppers
         const duration = 5 * 1000;
         const animationEnd = Date.now() + duration;
         const defaults = { startVelocity: 60, spread: 360, ticks: 100, zIndex: 1000 };
 
         const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+
+        // Try to play global audio
+        const globalAudio = document.getElementById('launch-audio') as HTMLAudioElement;
+        if (globalAudio) {
+            globalAudio.currentTime = 0;
+            globalAudio.volume = 1.0;
+            globalAudio.play().catch(e => console.error("Global audio play failed:", e));
+        }
 
         const interval = setInterval(function () {
             const timeLeft = animationEnd - Date.now();
@@ -95,20 +72,9 @@ const LaunchPage: React.FC = () => {
         }, 50);
     };
 
-
-
     return (
         <div className="launch-page-container" style={{ backgroundImage: `url(${launchBg})` }}>
-            {/* Background Sound - Using local file for reliability */}
-            <audio
-                ref={audioRef}
-                preload="auto"
-                onLoadedData={() => console.log("✅ Audio loaded successfully")}
-                onError={(e) => console.error("❌ Audio loading error:", e)}
-            >
-                <source src="/party-popper.mp3" type="audio/mpeg" />
-                <source src="https://assets.mixkit.co/sfx/preview/mixkit-party-popper-1329.mp3" type="audio/mpeg" />
-            </audio>
+
 
             <div className="launch-overlay">
                 <motion.div

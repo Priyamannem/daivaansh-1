@@ -20,6 +20,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <audio id="launch-audio" preload="auto">
+          <source src="/party-popper.mp3" type="audio/mpeg" />
+          <source src="https://assets.mixkit.co/sfx/preview/mixkit-party-popper-1329.mp3" type="audio/mpeg" />
+        </audio>
         <Routes>
           <Route path="/" element={<LaunchPage />} />
           <Route path="/home" element={<Index />} />
