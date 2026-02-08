@@ -48,14 +48,14 @@ const LaunchPage: React.FC = () => {
                         console.error("Error name:", err.name);
                         console.error("Error message:", err.message);
 
-                        // Show user-friendly message
-                        alert("Sound couldn't play. Please check your browser's audio settings or try clicking again!");
+                        // Show user-friendly log
+                        console.warn("Sound couldn't play automatically. Most browsers require user interaction first.");
                     });
             }
         } else {
             console.error("❌ Audio element not found!");
-            alert("Audio element not loaded. Please refresh the page.");
         }
+
 
         // Fire poppers
         const duration = 5 * 1000;
@@ -88,11 +88,14 @@ const LaunchPage: React.FC = () => {
             });
         }, 150);
 
-        // Redirect after a short delay to allow sound to start
+        // Redirect immediately after firing poppers
         setTimeout(() => {
+            console.log("✈️ Redirecting to home immediately...");
             navigate('/home');
-        }, 300);
+        }, 50);
     };
+
+
 
     return (
         <div className="launch-page-container" style={{ backgroundImage: `url(${launchBg})` }}>

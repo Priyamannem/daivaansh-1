@@ -27,7 +27,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center pt-12">
+    <section className="relative min-h-[100dvh] lg:h-screen flex items-center pt-20 lg:pt-12 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -36,21 +36,21 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
         {/* Modern gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent lg:from-black/80 lg:via-black/40 lg:to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 py-12 lg:py-0">
         <div className="max-w-3xl">
           {/* Trust Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-gold px-4 py-2 rounded-full mb-4"
+            className="inline-flex items-center gap-2 bg-gold px-4 py-2 rounded-full mb-6"
           >
-            <Star className="w-4 h-4 text-gold-foreground fill-current" />
-            <span className="text-sm font-semibold text-gold-foreground">
+            <Star className="w-3 h-3 md:w-4 md:h-4 text-gold-foreground fill-current" />
+            <span className="text-[10px] md:text-sm font-semibold text-gold-foreground">
               Trusted by 500+ Happy Families
             </span>
           </motion.div>
@@ -60,7 +60,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-4"
+            className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6"
           >
             Your Dream Plot, Approved &{" "}
             <span className="text-gradient-gold">Ready for a Better Tomorrow</span>
@@ -71,7 +71,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-cream/90 text-lg md:text-xl mb-6 max-w-2xl"
+            className="text-cream/90 text-base md:text-xl mb-8 max-w-2xl"
           >
             Explore HMDA, YTDA, DTCP & FCDA approved open plots with clear documentation and peaceful locations. Start your journey to owning land today.
           </motion.p>
@@ -81,12 +81,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-wrap gap-4 mb-8"
+            className="flex flex-col sm:flex-row gap-4 mb-10"
           >
             <Button
               variant="hero"
               size="lg"
-              className="relative overflow-hidden bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black hover:text-white font-bold border-2 border-amber-600 shadow-[0_0_15px_rgba(251,191,36,0.5)] transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8"
+              className="w-full sm:w-auto relative overflow-hidden bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black hover:text-white font-bold border-2 border-amber-600 shadow-[0_0_15px_rgba(251,191,36,0.5)] transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8 py-6 h-auto"
               onClick={() => handleAction('/ventures')}
             >
               <motion.div
@@ -99,7 +99,7 @@ const HeroSection = () => {
             <Button
               variant="hero-outline"
               size="lg"
-              className="relative overflow-hidden border-2 border-amber-400 bg-black/40 text-amber-400 hover:text-white font-bold transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8"
+              className="w-full sm:w-auto relative overflow-hidden border-2 border-amber-400 bg-black/40 text-amber-400 hover:text-white font-bold transition-all duration-300 transform hover:scale-105 active:scale-95 group px-8 py-6 h-auto"
               onClick={() => handleAction('/book-site-visit')}
             >
               <motion.div
@@ -116,7 +116,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-wrap gap-3"
+            className="flex flex-wrap gap-2 md:gap-3"
           >
             {badges.map((badge, index) => (
               <div
@@ -130,30 +130,34 @@ const HeroSection = () => {
                   });
                   navigate(`/ventures?type=${badge.type}`);
                 }}
-                className={`group relative overflow-hidden flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full cursor-pointer transition-all hover:scale-105 active:scale-95 border-2 border-amber-500/40 bg-black/60 text-cream hover:border-amber-400 hover:bg-black/80`}
+                className={`group relative overflow-hidden flex items-center gap-2 backdrop-blur-md px-3 py-1.5 md:px-4 md:py-2 rounded-full cursor-pointer transition-all hover:scale-105 active:scale-95 border-2 border-amber-500/40 bg-black/60 text-cream hover:border-amber-400 hover:bg-black/80`}
               >
                 <motion.div
                   className="absolute top-0 -left-[100%] w-full h-full bg-white/10 skew-x-[-25deg]"
                   animate={{ left: ['100%', '-100%'] }}
                   transition={{ repeat: Infinity, duration: 3, ease: "linear", delay: index * 0.5 }}
                 />
-                <badge.icon className={`w-4 h-4 text-amber-500 relative z-10`} />
-                <span className="text-sm font-semibold tracking-wide relative z-10">{badge.label}</span>
+                <badge.icon className={`w-3 h-3 md:w-4 md:h-4 text-amber-500 relative z-10`} />
+                <span className="text-[10px] md:text-sm font-semibold tracking-wide relative z-10">{badge.label}</span>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Transparent Bottom Footer Overlay */}
-      <div className="absolute bottom-0 left-0 w-full z-20 bg-black/30 backdrop-blur-none">
-        <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-center items-center gap-2">
-          <p className="text-cream/80 text-xs">
-            © {currentYear} Daivaansh Infra. All rights reserved. Designed and developed by <a href="https://hashtagheros.in/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors font-medium">Hashtag Heros Digital Solutions</a>
+      {/* Transparent Bottom Footer Overlay - Hide on mobile to save space or keep it static */}
+      <div className="absolute bottom-0 left-0 w-full z-20 bg-black/50 backdrop-blur-sm lg:bg-black/30 lg:backdrop-blur-none">
+        <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-center items-center gap-1">
+          <p className="text-white/80 text-[10px] text-center">
+            © {currentYear} Daivaansh Infra. All rights reserved.
+          </p>
+          <p className="text-white/80 text-[10px] text-center">
+            Designed by <a href="https://hashtagheros.in/" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline font-medium">Hashtag Heros Digital Solutions</a>
           </p>
         </div>
       </div>
     </section>
+
   );
 };
 

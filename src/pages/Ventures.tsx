@@ -33,7 +33,7 @@ const Ventures = () => {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="font-serif text-4xl md:text-5xl font-bold text-cream mb-4"
+              className="font-serif text-3xl md:text-5xl font-bold text-cream mb-4"
             >
               {filterType ? `${filterType} Ventures` : "Our Ventures"}
             </motion.h1>

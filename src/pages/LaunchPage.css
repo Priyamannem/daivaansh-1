@@ -87,3 +87,38 @@
     transform: translateY(-5px);
     background: linear-gradient(135deg, #DAA520 0%, #FFD700 100%);
 }
+
+@media (max-width: 768px) {
+    .launch-content {
+        padding: 1.5rem;
+    }
+    .launch-h1 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+    .launch-h3 {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 2rem;
+    }
+    .timer-display {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+    }
+    .launch-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .launch-h1 {
+        font-size: 1.8rem;
+    }
+    .timer-display {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+}

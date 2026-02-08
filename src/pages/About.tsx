@@ -34,7 +34,7 @@ const About = () => {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="font-serif text-4xl md:text-5xl font-bold text-cream mb-6"
+              className="font-serif text-3xl md:text-5xl font-bold text-cream mb-6"
             >
               Building Trust, One Plot at a Time
             </motion.h1>
@@ -135,12 +135,12 @@ const About = () => {
                 <div className="w-20 h-1 bg-accent mx-auto"></div>
               </motion.div>
 
-              <div className="grid md:grid-cols-5 gap-12 items-center">
+              <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  className="md:col-span-2"
+                  className="md:col-span-2 max-w-sm mx-auto md:max-w-none"
                 >
                   <div className="aspect-square rounded-3xl flex items-center justify-center overflow-hidden border-4 border-primary shadow-xl">
                     <img src={sampathImg} alt="Sampath Bontala - Managing Director" className="w-full h-full object-cover" />
@@ -151,12 +151,12 @@ const About = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="md:col-span-3"
+                  className="md:col-span-3 text-center md:text-left"
                 >
-                  <h3 className="font-serif text-3xl font-bold text-forest mb-2">Sampath Bontala</h3>
-                  <p className="text-forest font-bold text-xl mb-6">Managing Director</p>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-forest mb-2">Sampath Bontala</h3>
+                  <p className="text-forest font-bold text-lg md:text-xl mb-6">Managing Director</p>
 
-                  <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+                  <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
                     <p>
                       Sampath Bontala leads Daivaansh Infra with a clear vision focused on trust-based open plot development. His leadership emphasizes legal clarity, quality planning, and long-term customer value.
                     </p>

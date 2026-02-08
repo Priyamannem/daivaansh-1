@@ -2,8 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ConfettiEffect from "@/components/ConfettiEffect";
-import Footer from "@/components/Footer";
-
 
 const Index = () => {
   return (
@@ -14,7 +12,7 @@ const Index = () => {
         <HeroSection />
       </main>
 
-      <Footer />
+
       <WhatsAppButton />
     </div>
   );

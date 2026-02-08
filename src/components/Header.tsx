@@ -44,11 +44,11 @@ const Header = ({ transparent = false }: HeaderProps) => {
               <img src={logoImg} alt="Daivaansh Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className={`font-serif font-bold text-xl leading-tight transition-colors ${isScrolled || !transparent ? "text-forest" : "text-white"
+              <span className={`font-serif font-bold text-lg md:text-xl leading-tight transition-colors ${isScrolled || !transparent ? "text-forest" : "text-white"
                 }`}>
                 Daivaansh
               </span>
-              <span className={`font-serif font-bold text-xl leading-tight transition-colors ${isScrolled || !transparent ? "text-forest" : "text-white"
+              <span className={`font-serif font-bold text-lg md:text-xl leading-tight transition-colors ${isScrolled || !transparent ? "text-forest" : "text-white"
                 }`}>
                 Infra
               </span>

@@ -76,7 +76,7 @@ Please contact me.`;
               transition={{ delay: 0.1 }}
               className="text-cream/80 text-lg max-w-2xl mx-auto"
             >
-              Get in touch with us to schedule a free site visit or learn more about हमारा ventures.
+              Get in touch with us to schedule a free site visit or learn more about our ventures.
             </motion.p>
           </div>
         </section>
