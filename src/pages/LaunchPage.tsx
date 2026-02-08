@@ -32,8 +32,8 @@ const LaunchPage: React.FC = () => {
             console.log("📊 Audio ready state:", audioRef.current.readyState);
             console.log("🔊 Audio source:", audioRef.current.src);
 
-            // Set volume to 70%
-            audioRef.current.volume = 0.7;
+            // Set volume to 100%
+            audioRef.current.volume = 1.0;
 
             // Attempt to play
             const playPromise = audioRef.current.play();
